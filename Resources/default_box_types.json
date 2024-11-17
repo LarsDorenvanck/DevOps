@@ -1,0 +1,12 @@
+{
+  "box_types": [
+    {
+      "box": 1,
+      "weight": 2.5
+    },
+    {
+      "box": 2,
+      "weight": 5
+    }
+  ]
+}

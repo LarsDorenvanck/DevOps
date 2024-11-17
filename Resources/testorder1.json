@@ -1,0 +1,54 @@
+{
+  "order": [
+    {
+      "product": "Carrot",
+      "amount": 2,
+      "weight": 1
+    },
+    {
+      "product": "Broccoli",
+      "amount": 1,
+      "weight": 0.5
+    },
+    {
+      "product": "Spinach",
+      "amount": 3,
+      "weight": 0.3
+    },
+    {
+      "product": "Tomato",
+      "amount": 2,
+      "weight": 1.2
+    },
+    {
+      "product": "Cucumber",
+      "amount": 1,
+      "weight": 0.4
+    },
+    {
+      "product": "Bell Pepper",
+      "amount": 3,
+      "weight": 0.6
+    },
+    {
+      "product": "Lettuce",
+      "amount": 2,
+      "weight": 0.7
+    },
+    {
+      "product": "Onion",
+      "amount": 1,
+      "weight": 0.8
+    },
+    {
+      "product": "Garlic",
+      "amount": 3,
+      "weight": 0.2
+    },
+    {
+      "product": "Potato",
+      "amount": 2,
+      "weight": 1.5
+    }
+  ]
+}
