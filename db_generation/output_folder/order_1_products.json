@@ -1,0 +1,17 @@
+{
+  "order_id": 1,
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "weight": 5.5,
+      "quantity": 3
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "weight": 3.2,
+      "quantity": 2
+    }
+  ]
+}
