@@ -1,0 +1,84 @@
+{
+    "warehouses": [
+      {
+        "id": 1,
+        "name": "Warehouse A",
+        "columns": 10,
+        "rows": 15
+      },
+      {
+        "id": 2,
+        "name": "Warehouse B",
+        "columns": 8,
+        "rows": 12
+      }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "name": "Product 1",
+        "weight": 5.5
+      },
+      {
+        "id": 2,
+        "name": "Product 2",
+        "weight": 3.2
+      }
+    ],
+    "product_warehouse_locations": [
+      {
+        "warehouse_id": 1,
+        "product_id": 1,
+        "x_coordinate": 3,
+        "y_coordinate": 7
+      },
+      {
+        "warehouse_id": 1,
+        "product_id": 2,
+        "x_coordinate": 5,
+        "y_coordinate": 10
+      },
+      {
+        "warehouse_id": 2,
+        "product_id": 1,
+        "x_coordinate": 2,
+        "y_coordinate": 4
+      }
+    ],
+    "orders": [
+      {
+        "id": 1
+      },
+      {
+        "id": 2
+      }
+    ],
+    "order_lines": [
+      {
+        "order_id": 1,
+        "product_id": 1,
+        "quantity": 3
+      },
+      {
+        "order_id": 1,
+        "product_id": 2,
+        "quantity": 2
+      },
+      {
+        "order_id": 2,
+        "product_id": 1,
+        "quantity": 1
+      }
+    ],
+    "boxes": [
+      {
+        "id": 1,
+        "capacity": 5
+      },
+      {
+        "id": 2,
+        "capacity": 10
+      }
+    ]
+  }
+  
