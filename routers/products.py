@@ -1,5 +1,5 @@
-from fastapi import FastAPI, HTTPException, APIRouter
-from psycopg2 import connect, Error
+from fastapi import APIRouter
+from psycopg2 import Error
 from dependencies.dependencies import db_connection
 from schemas.schemas import Product
 
