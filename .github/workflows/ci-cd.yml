@@ -41,14 +41,14 @@ jobs:
           DIGITALOCEAN_USERNAME: ${{ github.actor }}
         run: |
           echo "${DIGITALOCEAN_ACCESS_TOKEN}" | docker login registry.digitalocean.com -u "${DIGITALOCEAN_USERNAME}" --password-stdin
-#
-#      # Build Docker Image with Git commit hash as tag
-#      - name: Build Docker image
-#        env:
-#          COMMIT_HASH: ${{ github.sha }}
-#        run: |
-#          docker build -t registry.digitalocean.com/devops-cicd/fast-api:${COMMIT_HASH} -t registry.digitalocean.com/devops-cicd/fast-api:latest .
-#
+
+      # Build Docker Image with Git commit hash as tag
+      - name: Build Docker image
+        env:
+          COMMIT_HASH: ${{ github.sha }}
+        run: |
+          docker build -t registry.digitalocean.com/devops-cicd/fast-api:${COMMIT_HASH} -t registry.digitalocean.com/devops-cicd/fast-api:latest .
+
 #      # Push Docker Image
 #      - name: Push Docker image to DigitalOcean
 #        env:
