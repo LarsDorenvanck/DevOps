@@ -12,7 +12,7 @@ class ProductLocation(BaseModel):
     y_coordinate: int
 
 class Warehouse(BaseModel):
-    id: int
-    name: str
-    columns: int
-    rows: int
+    warehouse_id: int
+    warehouse_name: str
+    warehouse_columns: int
+    warehouse_rows: int

@@ -1,37 +1,28 @@
 from fastapi import APIRouter
-from psycopg2 import Error
-from dependencies.dependencies import db_connection
+
 from schemas.schemas import Product
+from services.products import add_products_to_db, search_products_by_id, list_products_from_db, update_products_in_db, \
+    delete_products_from_db
 
 router = APIRouter()
 
 
-@router.post("/add_product/")
-def add_order(product:Product):
-    cursor = db_connection.cursor()
-    try:
-        cursor.execute(
-            "INSERT INTO packing_optimization_db.products(id, name, weight) VALUES (%s,%s,%s)",
-            (product.product_id, product.product_name, product.product_weight)
-            )
-        db_connection.commit()
-        return{"message": f"product with name {product.product_name} added successfully"}
-    except Error as e:
-        return {"error in request": str(e)}
-        db_connection.rollback()
-    finally: cursor.close()
+@router.post("/")
+def add_order(product: Product):
+    return add_products_to_db(product)
 
+@router.get("/")
+def get_products():
+    return list_products_from_db()
 
+@router.put("/{product_id}")
+def update_product(product_id: str, product: Product):
+    return update_products_in_db(product_id,product)
 
 @router.get("/{product_id}")
 def get_data_from_db(product_id: int):
-    cursor = db_connection.cursor()
-    try:
-        cursor.execute("SELECT * FROM packing_optimization_db.products WHERE id = %s", (product_id,))
-        data = cursor.fetchall()
-        print(f"{data[0][0]}\n{data[0][1]}\n{data[0][2]}")
-        return {"data": data}
-    except Error as e:
-        return {"error in request": str(e)}
-    finally:
-        cursor.close()
+    return search_products_by_id(product_id)
+
+@router.delete("/{product_id}")
+def delete_product(product_id: int):
+    return delete_products_from_db(product_id)
