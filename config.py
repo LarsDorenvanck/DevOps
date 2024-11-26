@@ -17,8 +17,8 @@ db_config = {
     "port" : os.getenv("DB_PORT"),
     "database" : os.getenv("DB_DATABASE"),
     "schema" : os.getenv("DB_SCHEMA"),
-    "url" : f"postgresql://{os.getenv("DB_USER")}:{os.getenv("DB_PASSWORD")}@{os.getenv("DB_HOST")}:{os.getenv("DB_PORT")}/",
-    "url_with_database" : f"postgresql://{os.getenv("DB_USER")}:{os.getenv("DB_PASSWORD")}@{os.getenv("DB_HOST")}:{os.getenv("DB_PORT")}/{os.getenv("DB_NAME")}"
+    "url" : f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/",
+    "url_with_database" : f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
 }
 
 # Create the SQLAlchemy engine
