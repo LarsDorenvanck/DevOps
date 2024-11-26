@@ -29,8 +29,8 @@ jobs:
       # Log in to DigitalOcean Container Registry
       - name: Log in to DigitalOcean
         env:
-          DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
-          DIGITALOCEAN_USERNAME: NiekL
+          DIGITALOCEAN_ACCESS_TOKEN: "dop_v1_638d9c0ec1fefbcda91d9676df1f6859871b688bbe3f49a337b71059e883a6cd"
+          DIGITALOCEAN_USERNAME: "niekluttikhof8@gmail.com"
         run: |
           echo "${DIGITALOCEAN_ACCESS_TOKEN}" | docker login registry.digitalocean.com -u "${DIGITALOCEAN_USERNAME}" --password-stdin
 
