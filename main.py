@@ -5,5 +5,5 @@ from app.database import *
 app = FastAPI()
 
 # Optional to create database and
-create_database()
-create_schema()
+# create_database()
+# create_schema()
