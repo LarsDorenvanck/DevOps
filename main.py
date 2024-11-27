@@ -8,7 +8,7 @@ app = FastAPI()
 # create_database()
 # create_schema()
 
-print("iets")
+print("iets!")
 
 @app.get("/")
 def read_root():
