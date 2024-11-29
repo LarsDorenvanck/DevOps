@@ -42,8 +42,6 @@ def create_schema_if_not_exist(db_name, db_url, db_schema):
             else:
                 print(f"Schema '{db_schema}' already exists!")
 
-
-
     except Exception as e:
         print(f"Failed to create schema: {e}")
 
